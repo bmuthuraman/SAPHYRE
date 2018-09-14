@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.clear {clear: both;font-size: 1px;}
+a {cursor: pointer;}
+body {background: fixed linear-gradient(220deg, #0caedd 10%, #183a6b 90%); font-size: 14px!important;font-family: 'Lato', sans-serif;overflow-x: hidden;}
+select {-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;appearance: none;outline: none;cursor: pointer;}
+.form-control {font-size: 14px!important;}
+.form-control:focus {box-shadow: 0 0 0 0 transparent!important;}
+:focus {outline: 0!important;}
+.select {
+    position: relative; width: 100%; line-height: 36px;
+    &:after {
+        position: absolute; top: 0; right: 10px; content: "\f107"; font-family: FontAwesome; pointer-events: none;
+    }
+    .form-control {height: auto!important; padding-right: 24px;}
+}
+.row {margin: 0!important;}
+// padding
+.padding0 {padding: 0!important;}
+.padding15 {padding: 15px;}
+.pt15 {padding-top: 15px;}
+.pb15 {padding-bottom: 15px;}
+.ptb15 {padding-top: 15px;padding-bottom: 15px;}
+// margin
+.margin0 {margin: 0!important;}
+.mt5 {margin-top: 5px;}
+.mt10 {margin-top: 10px;}
+.mt15 {margin-top: 15px;}
+.mt20 {margin-top: 20px;}
+
+$white-color: #FFF;
+$blue-color: #097FBE;
+$red-color: #F00;
+$meroon : #c36754;
+$labgray: #999;
+$btncolor: #54c2c8;
+$tr_hover: #f9f9f9;
+
+
+.white {color: $white-color;}
+.labgray {color: $labgray;}
+.red {color: $red-color;}
+.bg {
+    background: $white-color;
+}
+.lheight36 {line-height: 36px;}
+// TABLE STYLES
+.table_default {
+    width: 100%!important;border-bottom: 1px solid #dee2e6;
+    thead {
+        tr {
+            th {
+                font-weight: normal; border-bottom: 1px solid #dee2e6;
+            }
+        }
+        
+    }
+}
+.table_border {
+    width: 100%!important;border: 1px solid #dee2e6;
+    thead {
+        tr {
+            th {
+                font-weight: normal; border-bottom: 1px solid #dee2e6;
+            }
+        }
+        
+    }
+}
+.tabhover {
+    tbody {
+        tr {
+            &:hover {                
+            @mixin linear-gradient($from, $to) {
+            background: $to;
+            background: -moz-linear-gradient(left, $from 3px, $to 4px);
+            background: -webkit-gradient(linear, left, right, color-stop(3px,$from), color-stop(4px,$to));
+            background: -webkit-linear-gradient(left, $from 3px,$to 4px);
+            background: -o-linear-gradient(left, $from 3px,$to 4px);
+            background: linear-gradient(to right, $from 3px,$to 4px);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+            }
+            @include linear-gradient($blue-color, $tr_hover);
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+.tableXscroll {overflow-x: auto;}
+.dataTables_paginate {
+    span {
+        .paginate_button:last-child{border-right: solid 1px #CCC!important;} 
+    }
+    .paginate_button:last-child{border-right: 0!important;}
+}
+.delet {
+    float: left; display: flex;
+    span {
+        color: $meroon;margin: auto; cursor: pointer;
+    }
+}
+.cancel {float: left;color: $blue-color!important; padding: .375rem .75rem;line-height: 1.5;border: solid 1px transparent;}
+.btn {min-width: 110px; background: $btncolor;color: $white-color;}
+.btndefult {float: left; width: max-content; width: intrinsic;width: -moz-max-content;width: -webkit-max-content;font-size: 14px!important;}
+// MODAL POPUP
+.modal-open {overflow: auto!important;}
+.modal-title {color: $blue-color;}
+.checkbox {
+    padding: 0;
+    label {
+        margin: 0;display: flex;
+        input[type="checkbox"] {
+            &:disabled + .cr {opacity: .5;}
+            &:disabled + .br {opacity: .5;}
+            display: none;
+        }
+        input[type="checkbox"] + .cr > .cr-icon, input[type="checkbox"] + .br > .cr-icon {
+            transform: scale(3) rotateZ(-20deg);opacity: 0;transition: all .3s ease-in;
+        }
+        input[type="checkbox"]:checked + .cr {
+            background: $btncolor; border-color: $btncolor; 
+        }
+        input[type="checkbox"]:checked + .br {
+            background: $blue-color; border-color: $blue-color; 
+        }
+        input[type="checkbox"]:checked + .cr > .cr-icon, input[type="checkbox"]:checked + .br > .cr-icon {
+           transform: scale(1) rotateZ(0deg);opacity: 1;
+        }            
+        &:after {
+            content: '';display: table;clear: both;
+        }
+        span.cr, span.br {
+            background: $white-color; border: 1px solid #a9a9a9;width: 20px;height: 20px;margin: auto 0;display: flex;cursor: pointer;
+            .cr-icon {
+                font-size: 12px;margin: auto; color: $white-color;
+            }
+        }
+        span.crtxt {
+            margin-left: 10px;
+        }
+    }
+}
+.modal-xl {max-width: 90% !important;width: 90% !important;}

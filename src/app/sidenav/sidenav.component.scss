@@ -1,0 +1,56 @@
+.sidenav {
+    float: left; width: 18%;background: #3882C0; margin: 0;padding: 50px 0 0 0;
+    .navbar-brand {display: none;}
+    .navbar-collapse {
+        ul.navbar-nav {
+            width: 100%;display: block; border-top: solid 1px #e5e5e5;
+            li.nav-item {
+                display: block;border-bottom: solid 1px #e5e5e5;
+                a.nav-link {
+                    color: #FFF; line-height: 20px; font-size: 14px; border-left: 6px solid #3882C0;padding: 15px 10px;display: flex;
+                   .menu_icon {color: #FFF;font-size: 20px; margin-right: 10px;}
+                    .arrow {margin: auto 0 auto auto;}
+                    &:hover {border-left: 6px solid #13b9e2; background: #5683ba;}
+                    &:after {display: none;}
+                }                
+                .dropdown-menu {
+                    position: static; font-size: 14px; background: transparent; border: 0;border-radius: 0; padding:5px 15px; margin: 0;
+                    li {
+                        a {
+                            color: #FFF; display: block;
+                        }
+                    }
+                }
+            }
+            li.show {
+                a.nav-link {
+                    border-left: 6px solid #13b9e2!important; background: #5683ba;
+                    .arrow {transform: rotate(90deg);}  
+                }
+            }
+            li.active {
+                a {
+                    border-left: 6px solid #13b9e2!important; background: #5683ba;                    
+                }
+                ul.show {
+                    li {
+                        a {background: transparent!important;border-left: 6px solid #3882C0!important;}
+                    }
+                }
+            }
+        }
+    }    
+}
+@media only screen and (max-width:1200px) {
+    .sidenav {
+        width: 100%; padding:0;flex-wrap: wrap;        
+        .navbar-toggler {
+            margin: 7px 15px;padding: 3px 10px;outline: 0;display: block;
+        }
+        .navbar-collapse {
+            flex-basis: 100%;display: none!important;
+        }
+        .show {display: block!important;}
+    }
+
+}

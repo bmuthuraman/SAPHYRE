@@ -1,0 +1,119 @@
+.bg {
+    .accordion {
+        width: 100%; background: #f0f7fc; color: #1480c0; font-size: 22px; padding: 6px 15px;display: flex;
+        &:after {
+            content: "\f078"; color: #b3b4b4; font-size: 18px; font-family: FontAwesome;margin: auto 0 auto auto; 
+        }
+    }
+    .active {
+        &:after {content: "\f077";}
+    }
+    .active + .panel {
+        display: none;opacity: 0; transition: opacity 1000ms;
+    }
+    .panel {
+        display: block; opacity: 1; overflow: hidden;padding-bottom: 20px;
+        ul.statsbar {
+            float: right; list-style: none; font-size: 14px; margin-top: 15px;
+            li {
+                float: left; color: #58585a; margin-right: 15px; font-weight: bold;
+                &:nth-child(1) {
+                    span {
+                        &:nth-child(1) {background: #cde9eb;}
+                        &:nth-child(2) {background: #c1dcf1;}
+                        &:nth-child(3) {background: #b3c4dd;}
+                        &:nth-child(4) {background: #b0b3c7;margin-right: 10px;}                        
+                    }
+                }
+                &:nth-child(2) {
+                    span {
+                        &:nth-child(1) {background: #9dd6db;}
+                        &:nth-child(2) {background: #87c2e5;}
+                        &:nth-child(3) {background: #779bc4;}
+                        &:nth-child(4) {background: #787fa0;margin-right: 10px;}                        
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        &:nth-child(1) {background: #56c1c7;}
+                        &:nth-child(2) {background: #09a5d8;}
+                        &:nth-child(3) {background: #1a72a8;}
+                        &:nth-child(4) {background: #2f4e7a;margin-right: 10px;}                        
+                    }
+                }
+                span {
+                    float: left;width: 6px;height: 12px;display: block;margin: 5px 0;
+                }
+                p {
+                    color: #999;font-weight: normal;
+                }
+            }            
+        }
+        h4 {color: #666;}
+        .flx-title {
+            height: 38px;border-right: 2px solid #818285;display: flex!important;
+            .title {
+                width: 100%;line-height: 14px;margin: auto 0;
+            }
+        }
+        #myDivId1, #myDivId2, #myDivId3, #myDivId4 {
+            background: #f5f7f9;float: left;width: 100%;height: 28px;margin: 5px 0; position: relative;
+            .progress1, .progress2, .progress3, .progress4, .progress5 {
+                z-index: 1;width: 0px;height: 100%;position: absolute;left: 0px;top: 0px;float: left;
+            }
+            .progress1 {background:#54c2c8;}
+            .progress2 {background:#11a4da;}
+            .progress3 {background:#1972aa;}
+            .progress4 {background:#2b4e7a;}
+            .content {
+                z-index: 9;position: relative;
+            }
+        }
+        .days {
+            color: #999;line-height: 28px;margin: 5px 0;
+        }
+    }
+
+    .dataTable {
+        thead {
+            tr {
+                th {
+                    font-size: 12px; font-weight: normal;border-bottom: 1px solid #dddddd; padding: 8px;
+                    &:nth-child(2) {width: 150px;}
+                    &:nth-child(3) {width: 150px;}
+                }
+                .sorting {
+                    position: relative;background: transparent;
+                    &:after{
+                        content: "\e150";
+                        color: #dadada;
+                        font-family: 'Glyphicons Halflings';
+                        position: absolute;
+                        bottom: 8px;
+                        right: 0px;
+                    }
+                }
+                .sorting_asc {
+                    position: relative;background: transparent;
+                    &:after{
+                        content: "\e155";
+                        color: #666;
+                        font-family: 'Glyphicons Halflings';
+                        position: absolute;
+                        bottom: 8px;
+                        right: 0px;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:nth-child(odd) {background: #f9f9f9;}
+            }
+        }
+    }
+    
+    .no-footer {border-bottom: 1px solid #dddddd;}
+
+}
+

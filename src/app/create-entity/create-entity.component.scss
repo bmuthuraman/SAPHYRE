@@ -1,0 +1,18 @@
+$blue-color: #097FBE;
+$tab-color: #939598;
+$white: #FFF;
+$btncolor: #54c2c8;
+$anchertag: #007bff;
+a {color: $anchertag!important;}
+.bg {
+    min-height: 500px;
+    h4 {color: $blue-color;}
+    .nav-tabs {
+        li {
+            a {border: 0;color: $tab-color!important;}
+            .active {
+                color: $blue-color!important; border-bottom: solid 2px $blue-color;
+            }
+        }
+    }    
+}

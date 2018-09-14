@@ -1,0 +1,110 @@
+<app-modal title="Associate Investor:">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 col-12">
+      <ul class="radio">
+        <li><input type="radio" name="netting"> <label>Individual</label></li>
+        <li><input type="radio" name="netting"> <label>Company</label></li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 col-12"></div>
+    <div class="col-md-6 col-sm-12 col-12 mt10">
+      <div class="form-group">
+        <label class="labgray">Name:</label>
+        <input type="text" class="form-control" placeholder="Name">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-12 mt10">
+      <div class="form-group">
+        <label class="labgray">Registered Address Country:</label>
+        <input type="text" class="form-control" placeholder="Registered Address Country">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-12">
+      <div class="form-group">
+        <label class="labgray">Tax ID:</label>
+        <input type="text" class="form-control" placeholder="Tax ID">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-12">
+      <div class="form-group">
+        <label class="labgray">Primary Place of Business Country:</label>
+        <input type="text" class="form-control" placeholder="Primary Place of Business Country">
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-12">
+      <button type="button" class="btn btndefult">Search</button>
+    </div>   
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-12 mt15">
+      <table width="100%" class="table table_default">
+        <thead>
+          <tr>
+            <th>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                </label>
+              </div>
+            </th>
+            <th>Name</th>
+            <th>Tax ID</th>
+            <th>Registered Address Country</th>
+            <th>Principle Place of Business Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="" name="checkbox">
+                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                </label>
+              </div>
+            </td>
+            <td>John Smith</td>
+            <td>XXXX</td>
+            <td>USA</td>
+            <td>USA</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="" name="checkbox">
+                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                </label>
+              </div>
+            </td>
+            <td>John Smith</td>
+            <td>XXXX</td>
+            <td>USA</td>
+            <td>USA</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="" name="checkbox">
+                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                </label>
+              </div>
+            </td>
+            <td>John Smith</td>
+            <td>XXXX</td>
+            <td>USA</td>
+            <td>USA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12 col-sm-12 col-12">
+      <button type="button" class="btn btndefult">Submit</button>
+      <a class="cancel" data-dismiss="modal">Cancel</a>
+    </div>
+  </div>  
+</app-modal>
+
+

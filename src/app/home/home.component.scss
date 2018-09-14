@@ -1,0 +1,11 @@
+main {
+    background: #2478ae;padding: 0;margin: 0;
+    section {
+        float: left; width: 82%; min-height: 100vh; background: #f8f8f9;padding: 30px;
+    }
+    @media only screen and (max-width:1200px) {
+        section {
+            width: 100%;
+        }
+    }
+}

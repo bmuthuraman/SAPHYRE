@@ -1,0 +1,266 @@
+<div class="bg ptb15">  
+  <div class="col-md-12 col-sm-12 col-12">
+    <h4>Create Entity</h4>
+  </div>
+  <div class="col-md-12 col-sm-12 col-12 mt15">
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#legal-entity-information">Legal Entity Information</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#investors">Investors</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub-accounts">Sub Accounts</a></li>
+    </ul>      
+    <div class="tab-content">
+      <div class="tab-pane fade active show" id="legal-entity-information">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 col-12 padding0">
+            <div class="col-md-10 col-sm-10 col-10 mt20">
+              <div class="form-group">
+                <label class="labgray">Legal Entity Name <span class="red">*</span>:</label>
+                <input type="text" class="form-control" placeholder="Legal Entity Name">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">LEI:</label>
+                <input type="text" class="form-control" placeholder="LEI">
+              </div>
+            </div>         
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">Alias/Ticker:</label>
+                <input type="text" class="form-control" placeholder="Alias/Ticker">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">GIIN:</label>
+                <input type="text" class="form-control" placeholder="GIIN">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">Active Status:</label>
+                <div class="select">
+                  <select class="form-control">
+                    <option value="">Active</option>
+                    <option>Inactive</option>
+                    <option>Pre Launched</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 padding0">
+            <div class="col-md-10 col-sm-10 col-10 mt20">
+              <div class="form-group">
+                <label class="labgray">Investor(s):</label>
+                <div class="clear"></div>
+                <a (click)="dashboard()">+associate investor</a>                
+              </div>
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                    <span class="crtxt">Is this legal entity a client?</span>
+                  </label>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">Credit Limit:</label>
+                <input type="text" class="form-control" placeholder="Credit Limit">
+              </div>
+            </div>           
+          </div>
+          <div class="clear"></div>
+          <div class="col-md-6 col-sm-12 col-12 padding0 mt20">
+            <div class="col-md-12 col-sm-12 col-12">
+              <label>Registered Address:</label>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10 mt10">
+              <div class="form-group"> 
+                <label class="labgray">Country <span class="red">*</span>:</label>             
+                <input type="text" class="form-control" placeholder="Country">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <label class="labgray">Address Line:</label>
+            </div>
+            <div class="regaddress">
+              <div class="row regelement" id='div_1'>
+                <div class="col-md-10 col-sm-10 col-10">
+                  <input type='text' class="form-control" placeholder='Address Line 1' id='txt_"+ nextindex +"'>
+                </div>
+                <div class="delet">
+                  <span id='remove_" + nextindex + "' class="glyphicon glyphicon-trash remove"></span>
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10 col-10">              
+                <a class="regadd">+ Address Line</a>
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10 mt15">
+              <div class="form-group">
+                <label class="labgray">City:</label>
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">State:</label>
+                <input type="text" class="form-control" placeholder="State">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">Zip Code:</label>
+                <input type="text" class="form-control" placeholder="Zip Code">
+              </div>
+            </div>            
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 padding0 mt20">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-12">
+                <label>Principle Place of Business:</label>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                    <span class="crtxt">Same as Registered Address?</span>
+                  </label>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-10 col-sm-10 col-10 mt10">
+              <div class="form-group"> 
+                <label class="labgray">Country <span class="red">*</span>:</label>             
+                <input type="text" class="form-control" placeholder="Country">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <label class="labgray">Address Line:</label>
+            </div>
+            <div class="busaddress">
+              <div class="row buselement" id='div_1'>
+                <div class="col-md-10 col-sm-10 col-10">
+                  <input type='text' class="form-control" placeholder='Address Line 1' id='txt_"+ nextindex +"'>
+                </div>
+                <div class="delet">
+                  <span id='remove_" + nextindex + "' class="glyphicon glyphicon-trash remove"></span>
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10 col-10">              
+                <a class="busadd">+ Address Line</a>
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10 mt15">
+              <div class="form-group">
+                <label class="labgray">City:</label>
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">State:</label>
+                <input type="text" class="form-control" placeholder="State">
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-10">
+              <div class="form-group">
+                <label class="labgray">Zip Code:</label>
+                <input type="text" class="form-control" placeholder="Zip Code">
+              </div>
+            </div>            
+          </div>
+          <div class="clear"></div>
+          <div class="col-md-12 col-sm-12 col-12 mt10">
+            <div class="form-group">
+              <button type="button" class="btn btndefult">Submit</button>
+              <a href="#" class="cancel">Cancel</a>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>        
+      </div>
+      <div class="tab-pane fade" id="investors">
+        <div class="col-md-10 col-sm-10 col-10 mt20">
+          <label class="labgray">Investor(s):</label>
+          <div class="clear"></div>
+          <a (click)="invester()">+associate investor</a>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sub-accounts">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-12 mt20">
+            <label class="labgray">Sub-Acc Id:</label>
+            <input type="text" placeholder="Sub-Acc Id" class="form-control">
+          </div>
+          <div class="col-md-3 col-sm-3 col-12 mt20">
+            <label class="labgray">Sub-Acc Name:</label>
+            <input type="text" placeholder="Sub-Acc Name" class="form-control">
+          </div>
+          <div class="col-md-3 col-sm-3 col-12 mt20">
+            <label class="labgray">CounterParty:</label>
+            <div class="select">
+              <select name=""  class="form-control">
+                <option value="">All</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-12 mt20">
+            <label>&nbsp;</label>
+            <div class="clear"></div>
+            <button type="button" class="btn btndefult">Search</button>
+            <a href="#" class="cancel">Cancel</a>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-12 mt20">
+            <p>Results</p>
+            <div class="clear"></div>
+            <table class="table table_border tabhover">
+              <thead>
+                <tr>
+                  <th class="labgray">Legal Entity Name</th>
+                  <th class="labgray">LEI</th>
+                  <th class="labgray">GIIN</th>
+                  <th class="labgray">Registered Address Country</th>
+                  <th class="labgray">Principle Place of Business Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BlackRock Entity 1</td>
+                  <td>234325425</td>
+                  <td>234</td>
+                  <td>USA</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>BlackRock Entity 2</td>
+                  <td>453424534</td>
+                  <td>236</td>
+                  <td>UK</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>BlackRock Entity 3</td>
+                  <td>546464563</td>
+                  <td>454</td>
+                  <td>USA</td>
+                  <td>USA</td>
+                </tr>
+              </tbody>
+            </table>           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,21 @@
+$blue: #097FBE;
+$gray: #999;
+$trcurrent: #e9eff2;
+
+.radio {
+    list-style: none;padding: 0;margin: 0;
+    li {
+        display: inline-block;margin-right: 10px;
+        input[type='radio'] {
+            float: left; -webkit-appearance: none; font:normal 20px/1 FontAwesome;
+            &:after {color: $gray;content: "\f10c";}
+            &:checked {
+                &:after {color: $blue;content: "\f192";}                
+            }
+        }
+        label {
+            float: left;margin: 0 0 0 5px;
+        }
+    }
+}
+.trcurrent {background: $trcurrent;}

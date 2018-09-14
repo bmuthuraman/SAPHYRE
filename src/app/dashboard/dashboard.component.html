@@ -1,0 +1,197 @@
+<div class="bg">
+    <div class="accordion">Monthly Stats</div>
+    <div class="panel">
+        <div class="row">
+        <div class="col-md-5 col-sm-12 col-12 padding0">
+            <div class="row">
+            <div class="col-md-5 col-sm-5 col-xs-12 mt15">
+                <label class="labgray">Time Period</label>
+                <div class="select">
+                <select class="form-control">
+                    <option>April 2017</option>
+                    <option>May 2017</option>
+                    <option>June 2017</option>
+                    <option>July 2017</option>
+                </select>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7 col-xs-12 mt15">
+                <label class="labgray">Compare</label>
+                <div class="select">
+                    <select class="form-control">
+                    <option>Brokers</option>
+                    </select>
+                </div>
+            </div>     
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-12 mt15">
+            <ul class="statsbar">
+                <li>
+                    <span></span><span></span><span></span><span></span> Not Started
+                    <p>(light)</p>
+                </li>
+                <li>
+                    <span></span><span></span><span></span><span></span> In Progress
+                    <p>(regular)</p>
+                </li>
+                <li>
+                    <span></span><span></span><span></span><span></span> Complete
+                    <p>(dark)</p>
+                </li>
+            </ul>
+        </div>    
+        <div class="clear"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-5 col-sm-12 col-12 padding0">
+            <div class="row">
+            <div class="col-md-12 col-sm-12 col-12 mt15">
+                <h4>Average Completion Time</h4>
+                <p class="labgray">Single account start to finish</p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12 mt15">
+                <div class="row">
+                <div class="col-md-3 col-sm-3 col-3">&nbsp;</div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label>0 days</label>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label>1 month</label>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label>2 months</label>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="row">
+                <div class="col-md-3 col-sm-3 col-3 flx-title padding0">
+                    <label class="title">Barclays</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6 padding0">
+                    <div id="myDivId1" class="div-bar">
+                    <div class="progress1"></div>
+                    <div class="content"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label class="days">10Days</label>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="row">
+                <div class="col-md-3 col-sm-3 col-3 flx-title padding0">
+                    <label class="title">Indian Overseas Bank</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6 padding0">
+                    <div id="myDivId2" class="div-bar">
+                    <div class="progress2"></div>
+                    <div class="content"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label class="days">29Days</label>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="row">
+                <div class="col-md-3 col-sm-3 col-3 flx-title padding0">
+                    <label class="title">Punjab National Bank</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6 padding0">
+                    <div id="myDivId3" class="div-bar">
+                    <div class="progress3"></div>
+                    <div class="content"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label class="days">39Days</label>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="row">
+                <div class="col-md-3 col-sm-3 col-3 flx-title padding0">
+                    <label class="title">JPMorgan</label>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6 padding0">
+                    <div id="myDivId4" class="div-bar">
+                    <div class="progress4"></div>
+                    <div class="content"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <label class="days">13Days</label>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-12 padding0">
+            <div class="row">
+            <div class="col-md-12 col-sm-12 col-12 mt15">
+                <h4>Account Progress</h4>
+                <p class="labgray">For Accounts started this month</p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6 mt15">
+                <canvas id="doughnut1" width="100%" height="100%"></canvas>
+                <p class="text-center">Barclays</p>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6 mt15">
+                <canvas id="doughnut2" width="100%" height="100%"></canvas>
+                <p class="text-center">Credit Suisse</p>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6 mt15">
+                <canvas id="doughnut3" width="100%" height="100%"></canvas>
+                <p class="text-center">Goldman Sachs</p>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6 mt15">
+                <canvas id="doughnut4" width="100%" height="100%"></canvas>
+                <p class="text-center">JPMorgan</p>
+                <div class="clear"></div>
+            </div>
+            </div>
+        </div>      
+        </div>
+    </div>
+</div>
+<div class="mt20">
+    <div class="bg padding15">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12 tableXscroll">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ENTITY</th>
+                    <th>COUNTERPARTY</th>
+                    <th>TYPE</th>
+                    <th>LAST UPDATED</th>
+                    <th>AGE</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let dashboard of dashboards">
+                    <td>{{ dashboard.id }}</td>
+                    <td>{{ dashboard.entity }}</td>
+                    <td>{{ dashboard.counterparty }}</td>
+                    <td>{{ dashboard.type }}</td>
+                    <td>{{ dashboard.last_updated }}</td>
+                    <td>{{ dashboard.age }}</td>
+                    <td>{{ dashboard.status }}</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
